@@ -1,0 +1,15 @@
+- pipeline: "npm install test"
+  events:
+  - type: "PUSH"
+    refs:
+    - "refs/heads/main"
+  fail_on_prepare_env_warning: true
+  resources: "XLARGE"
+  actions:
+  - action: "Execute go build"
+    type: "BUILD"
+    docker_image_name: "library/golang"
+    docker_image_tag: "1.21"
+    execute_commands:
+    - "go build"
+    shell: "BASH"
