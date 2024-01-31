@@ -11,5 +11,6 @@
     docker_image_name: "library/golang"
     docker_image_tag: "1.21"
     execute_commands:
+    - "cd baserepo"
     - "go build"
     shell: "BASH"
