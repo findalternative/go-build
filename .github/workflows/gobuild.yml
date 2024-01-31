@@ -1,0 +1,22 @@
+name: go-build
+
+on:
+  push:
+    branches: [ "main"]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - uses: actions/setup-go@v5
+        with: 
+          go-version: '1.21.5'
+      - name: go build
+        working-directory: ./baserepo
+        run: |
+          go build
