@@ -2,6 +2,7 @@ build:
   image: golang:latest
   variables:
     GIT_SUBMODULE_STRATEGY: recursive
+  stage: build
   script:
     - cd baserepo
     - go build
