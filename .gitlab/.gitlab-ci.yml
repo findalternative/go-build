@@ -1,0 +1,9 @@
+build:
+  image: golang:1.21
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+  script:
+    - cd baserepo
+    - go build
+  rules:
+    - if: $ENABLE_PIPELINES == "true"
