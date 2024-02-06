@@ -1,4 +1,4 @@
-- pipeline: "npm install test"
+- pipeline: "go build"
   events:
   - type: "PUSH"
     refs:
