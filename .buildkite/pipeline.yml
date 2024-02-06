@@ -1,0 +1,2 @@
+steps:
+  - command: go env -w GOFLAGS="-buildvcs=false" && cd baserepo && go build
