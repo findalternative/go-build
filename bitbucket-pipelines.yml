@@ -1,0 +1,11 @@
+image: library/golang:1.21
+pipelines:
+  default:
+    - step:
+        name: go-build
+        script:
+          - git submodule sync
+          - git submodule update --init --recursive
+          - go env -w GOFLAGS="-buildvcs=false"
+          - cd baserepo
+          - go build
