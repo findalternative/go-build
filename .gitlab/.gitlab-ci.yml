@@ -1,5 +1,5 @@
 build:
-  image: golang:latest
+  image: golang:1.22
   variables:
     GIT_SUBMODULE_STRATEGY: recursive
   stage: build

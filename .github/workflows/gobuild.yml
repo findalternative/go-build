@@ -15,7 +15,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-go@v5
         with: 
-          go-version: '1.21.5'
+          go-version: '1.22.5'
       - name: go build
         working-directory: ./baserepo
         run: |
