@@ -2,6 +2,9 @@ image: library/golang:1.21
 pipelines:
   default:
     - step:
+        runs-on:
+          - self.hosted
+          - linux
         name: go-build
         script:
           - git submodule sync
