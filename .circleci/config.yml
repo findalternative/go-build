@@ -5,7 +5,7 @@ jobs:
   go-build:
     executor: 
       name: go/default
-      tag: 1.22.5
+      tag: 1.23.1
     steps:
       - checkout
       - run: git submodule sync

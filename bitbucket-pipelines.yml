@@ -1,4 +1,4 @@
-image: library/golang:1.22
+image: library/golang:1.23
 pipelines:
   default:
     - step:
